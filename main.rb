@@ -1,4 +1,4 @@
-class Main
+def options_list
   options = {
     1 => "List All Books",
     2 => "List All Music Albums",
@@ -13,4 +13,22 @@ class Main
   }
 
   options.each {|key, option| puts "#{key} - #{option}"}
+  gets.chomp
 end
+  def main
+    puts 'Welcome to Catalog of my things!'
+    number = options_list
+  
+    loop do
+      case number
+      when '0'
+        puts 'Thank you for using this app Goodbye!'
+        exit
+      else
+        puts 'Invalid input'
+        break
+      end
+    end
+  end
+  
+  main
